@@ -10,6 +10,10 @@ import java.util.List;
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
 
+/**
+ * @author iker.san7@educa.madrid.org
+ * @version 1.5
+ * */
 public class Playlist {
 
 	private String nombre;
@@ -19,6 +23,10 @@ public class Playlist {
 	
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	/**
+	 *Este metodo sirve para obtener la duracion total de las canciones
+	 * @return totalSegundos
+	 * */
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -28,6 +36,16 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+
+	/**
+	 *Agregar cancion nos siver para anyadir una cancion a nuestra playlist
+	 * @param nueva es el valor de la nueva cancion
+	 * @return exito
+	 * @exception
+	 * @see spotify.ikersan7.Cancion
+	 * @see spotify.ikersan7.DatosInvalidosException
+	 * @since 1.0
+	 */
 	public boolean agregarCancion(spotify.base.Cancion nueva) throws spotify.base.DatosInvalidosException {
 
 		boolean exito = false;
@@ -50,6 +68,12 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+	/**
+	 * encontrarCancionPorNombre nos sirve para buscar una cancion y si la encontramos nos devolverá un true
+	 * @param nombre nos vale para encontrar la cancion por el nombre
+	 * @return encontrado
+	 * @since 1.5
+	 * */
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -70,6 +94,10 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+	/**
+	 * @deprecated
+	 * @since 1.0
+	 * */
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
