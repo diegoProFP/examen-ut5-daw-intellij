@@ -6,6 +6,11 @@ import spotify.base.DatosInvalidosException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author marcos.palomo1@educa.madrid.org
+ * @version 1.5
+ */
+
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
@@ -19,6 +24,12 @@ public class Playlist {
 	
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+
+	/**
+	 * Se obtienen los minutos que dura la playlist con la división de la variable totalSegundos/60
+	 *
+	 * @return te devuelve el tiempo el resultado de la división de totalSegundos/60
+	 */
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -28,6 +39,16 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+
+	/**
+	 *
+	 * @param nueva Es un objeto de la clase canción
+	 * @return devulve true si se ha añadido la canción a la lista canciones y false en el caso que no se haya añadido
+	 * @since version 1.0
+	 * @see Cancion
+	 * @see DatosInvalidosException
+	 * @throws spotify.base.DatosInvalidosException si el parametro que entra es null
+	 */
 	public boolean agregarCancion(spotify.base.Cancion nueva) throws spotify.base.DatosInvalidosException {
 
 		boolean exito = false;
@@ -50,6 +71,13 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+
+	/**
+	 *
+	 * @param nombre es el parametro de entrada en este caso es un String
+	 * @return true si se ha podido encontrar el parametro en la lista canciones false si no se ha encontrado la cancion
+	 * @since version 1.5
+	 */
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -70,6 +98,11 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+
+	/**
+	 * @deprecated
+	 * @since version 1.0
+	 */
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
