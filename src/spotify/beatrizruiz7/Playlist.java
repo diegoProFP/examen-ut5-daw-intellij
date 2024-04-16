@@ -6,16 +6,22 @@ import java.util.List;
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
-
+/**
+ * @author beatriz.ruiz7
+ * @version 1.5*/
 public class Playlist {
 
 	private String nombre;
 	private int totalSegundos;
 	private List<Cancion> canciones;
 
-	
+
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	/**
+	 * @return devuelve double
+	 * no tiene parametro de entrada
+	 * */
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -25,6 +31,12 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+	/**
+	 * @return devuelve boolean
+	 * @since version 1.0
+	 * @param  nueva , clase Cancion
+	 * @throws DatosInvalidosException
+	 * */
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -47,6 +59,12 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+	/**
+	 * @return devuelve boolean
+	 * @since version 1.5
+	 * @param  nombre , clase String
+	 * nos devuelve un boolean diciendonos si la cancion ha sido encontrada o no
+	 * */
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -67,6 +85,12 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+	/**
+	 * @return devuelve boolean
+	 * @since version 1.0
+	 * @param  nombreCancion , clase String
+	 * @deprecated
+	 * */
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
