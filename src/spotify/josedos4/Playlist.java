@@ -3,9 +3,12 @@ package spotify.josedos4;
 import java.util.ArrayList;
 import java.util.List;
 
-//Poner comentario de la clase, con la descripción de qué es lo que hace  
-//De autor poned vuestro email de educaMadrid. 
-//La version de la clase es la 1.5
+
+/**
+ * Clase Playlist que almacena el nombre,total de segundos de la cancion y una lista privada de canciones
+ * @autor jose.dos4@educa.madrid.org
+ * @version 1.5
+ */
 
 public class Playlist {
 
@@ -13,18 +16,24 @@ public class Playlist {
 	private int totalSegundos;
 	private List<Cancion> canciones;
 
-	
-	// Poner descripcion, valor de retorno.
-	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	/**
+	 * Se obtiene los minutos calculando totalSegundos entre 60
+	 * @return el valor en minutos
+	 */
+
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
-		
-		
-		
-	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
-	// referenciar tanto a las clases Cancion y DatosInvalidosException
-	//Existe desde la version 1.0
+
+
+	/**
+	 *
+	 * @param nueva recibe el parametro de la clase Cancion
+	 * @return devuelve si se puede añadir la cancion o no
+	 * @throws DatosInvalidosException
+	 * @since 1.0
+	 */
+
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -44,9 +53,13 @@ public class Playlist {
 	}
 
 
-	
-	// Poner descripcion, parametros de entrada, valor de retorno.
-	//Existe desde la version 1.5
+	/**
+	 *
+	 * @param nombre parametro de entrada usado en este metodo.
+	 * @return devuelve la pposicion en la que esta la cancion si existe.
+	 * @since 1.5
+	 */
+
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -63,10 +76,13 @@ public class Playlist {
 
 		return encontrado;
 	}
-	
-	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
-	// encontrarCancionPorNombre(String nombre)
-	//Existe desde la version 1.0
+	/**
+	 * @deprecated Este metodo esta obsoleto porque se ha hecho uno mejor {@link #encontrarCancionPorNombre(String)}
+	 * @param nombreCancion parametro de entrada usado en este metodo.
+	 * @return devueleve si se ha encontrado la canción.
+	 * @since 1.0
+	 */
+
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
