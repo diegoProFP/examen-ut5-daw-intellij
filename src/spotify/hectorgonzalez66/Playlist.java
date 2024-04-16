@@ -3,9 +3,14 @@ package spotify.hectorgonzalez66;
 import java.util.ArrayList;
 import java.util.List;
 
+/**clase que permite obtener la duracion de una playlist, agregar una cancion a una playlist y/o buscar una cancion segun su nombre
+ * @author hector.gonzalez66@educa.madrid.org
+ * @version 1.5
+ * */
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
+
 
 public class Playlist {
 
@@ -13,7 +18,9 @@ public class Playlist {
 	private int totalSegundos;
 	private List<Cancion> canciones;
 
-	
+	/**los minutos se obtienen dividiendo totalSegundos entre 60
+	 * @return totalSegundos/60
+	 * */
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
 	public double obtenerDuracionTotal() {
@@ -21,7 +28,13 @@ public class Playlist {
 	}
 		
 		
-		
+		/** se cmprueba si se puede añadir una cancion comprobando si ya existe una (en ese caso no se puede)
+		 * @see Cancion
+		 * @see DatosInvalidosException
+		 * @param nueva
+		 * @return exito
+		 * @exception DatosInvalidosException
+		 * @version 1.0*/
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
@@ -44,7 +57,10 @@ public class Playlist {
 	}
 
 
-	
+	/**se comprueba si se comprueban todas las canciones por si coincide con el nombre que se desea
+	 * @param nombre
+	 * @return encontrado
+	 * @version 1.5*/
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
 	public boolean encontrarCancionPorNombre(String nombre) {
@@ -63,7 +79,10 @@ public class Playlist {
 
 		return encontrado;
 	}
-	
+
+	/**
+	 * @deprecated encontrarCancionPorNombre(String nombre)
+	 * @since 1.0*/
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
