@@ -66,7 +66,13 @@ public class Playlist {
 
 		return encontrado;
 	}
-	
+	/**
+	 * Devuelve true si encuentra la canción mediante el nombre proporcionado
+	 * @deprecated
+	 * @since 1.0
+	 * @param nombreCancion
+	 * @return encontrado
+	 */
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
