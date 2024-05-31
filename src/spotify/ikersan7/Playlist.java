@@ -1,7 +1,7 @@
 package spotify.ikersan7;
 
-import spotify.base.Cancion;
-import spotify.base.DatosInvalidosException;
+import spotify.RicardoVillarroelMiranda.Cancion;
+import spotify.RicardoVillarroelMiranda.DatosInvalidosException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class Playlist {
 
 	private String nombre;
 	private int totalSegundos;
-	private List<spotify.base.Cancion> canciones;
+	private List<Cancion> canciones;
 
 	
 	// Poner descripcion, valor de retorno.
@@ -46,7 +46,7 @@ public class Playlist {
 	 * @see spotify.ikersan7.DatosInvalidosException
 	 * @since 1.0
 	 */
-	public boolean agregarCancion(spotify.base.Cancion nueva) throws spotify.base.DatosInvalidosException {
+	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
 		if (canciones == null) {
@@ -102,7 +102,7 @@ public class Playlist {
 		boolean encontrado = false;
 
 		for (int cont = 0; cont < canciones.size(); cont++) {
-			spotify.base.Cancion cancionExtraida = this.canciones.get(cont);
+			Cancion cancionExtraida = this.canciones.get(cont);
 			if (cancionExtraida.getNombre().equals(nombreCancion)) {
 				encontrado = true;
 				break;
@@ -129,7 +129,7 @@ public class Playlist {
 		this.totalSegundos = totalSegundos;
 	}
 
-	public List<spotify.base.Cancion> getCanciones() {
+	public List<Cancion> getCanciones() {
 		return canciones;
 	}
 

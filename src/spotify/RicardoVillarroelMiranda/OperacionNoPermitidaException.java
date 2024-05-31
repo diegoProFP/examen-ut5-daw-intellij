@@ -1,4 +1,4 @@
-package spotify.base;
+package spotify.RicardoVillarroelMiranda;
 
 public class OperacionNoPermitidaException extends Exception {
 
