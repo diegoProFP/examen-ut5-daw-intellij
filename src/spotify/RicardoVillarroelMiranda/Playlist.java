@@ -1,4 +1,7 @@
-package spotify.base;
+package spotify.RicardoVillarroelMiranda;
+
+import spotify.RicardoVillarroelMiranda.Cancion;
+import spotify.RicardoVillarroelMiranda.DatosInvalidosException;
 
 import java.util.ArrayList;
 import java.util.List;

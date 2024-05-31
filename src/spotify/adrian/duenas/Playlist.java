@@ -38,7 +38,7 @@ public class Playlist {
 	/**
 	 * Con este método vamos a intruducir una nueva canción
 	 * @param  nueva Es un valor de tipo Cancion lo usaremos para saber que cancion es
-	 * @throws spotify.base.DatosInvalidosException lanza esta excepcion
+	 * @throws spotify.RicardoVillarroelMiranda.DatosInvalidosException lanza esta excepcion
 	 * @see Cancion vamos a utilizar el constructor de la clase cancion
 	 * @see  Exception es la clase de donde proviene la excepcion lanzada
 	 * @return  Exito nos devolvera si ha sido posible o no agregar la cancion mediante un boolean
