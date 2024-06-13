@@ -1,4 +1,4 @@
-package spotify.beatrizruiz7;
+package spotify.oswaldo.villarroel;
 
 import java.util.Objects;
 

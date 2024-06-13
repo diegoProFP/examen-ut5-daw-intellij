@@ -1,4 +1,4 @@
-package spotify.beatrizruiz7;
+package spotify.oswaldo.villarroel;
 
 public class Artista {
 
